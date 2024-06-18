@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de vehiculos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .btn-container {
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Listado de vehiculos</h2>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Tipo</th>
+                    <th>Consecionario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="vehiculo : ${vehiculos}">
+                    <td th:text="${vehiculo.id}"></td>
+                    <td th:text="${vehiculo.marca}"></td>
+                    <td th:text="${vehiculo.modelo}"></td>
+                    <td th:text="${vehiculo.año}"></td>
+                    <td th:text="${vehiculo.color}"></td>
+                    <td th:text="${vehiculo.precio}"></td>
+                    <td th:text="${vehiculo.tipo}"></td>
+                    <td th:text="${vehiculo.consecionario}"></td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-div">
+        <a class="back-button" href="/">Inicio</a>
+    </div>
+    
+</body>
+</html>
