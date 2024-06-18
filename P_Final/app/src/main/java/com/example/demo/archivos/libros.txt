@@ -1,0 +1,7 @@
+1;1984;George Orwell;Masculino;1949;6;8;12;19;Es una novela distópica clásica que aborda temas como el totalitarismo y la vigilancia estatal.
+2;Don Quijote de la Mancha;Miguel de Cervantes;Masculino;1605;1;16;456;50;Una obra cumbre de la literatura española
+3;Matar a un ruiseñor;Harper Lee;Femenino;1960;7;11;789;30;Una novela clásica de la literatura estadounidense
+4;Cien años de soledad;Gabriel García Márquez;Masculino;1967;3;12;5467;39;Una obra maestra del realismo mágico que narra la historia de la familia Buendía a lo largo de varias generaciones en Macondo.
+5;El señor de los anillos;J.R.R. Tolkien;Masculino;1954;7;29;9799;13;Es una novela de fantasía épica
+6;Orgullo y prejuicio;Jane Austen;Femenino;1813;4;23;6372;18;Una novela romántica que satiriza la sociedad y las normas sociales de la época victoriana en Inglaterra.
+7;super yoo;diana;Femenino;1000;10;10;8988;99;no se

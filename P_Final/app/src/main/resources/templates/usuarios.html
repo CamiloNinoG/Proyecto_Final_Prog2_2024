@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de usuarios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Listado de usuarios</h2>
+        <div th:if="${message}" class="alert alert-success" role="alert">
+            <span th:text="${message}"></span>
+        </div>
+        <form th:action="@{/buscarUsuario}" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar por Nombre" name="isbnInput" aria-label="Buscar por Nombre" aria-describedby="button-addon2" th:value="${isbnInput}">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+                </div>
+            </div>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="usuario : ${usuarios}">
+                    <td th:text="${usuario.id}"></td>
+                    <td th:text="${usuario.name}"></td>
+                    <td th:text="${usuario.last_name}"></td>
+                    <td th:text="${usuario.email}"></td>
+                    <td th:text="${usuario.password}"></td>
+                    <td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-div">
+        <a class="back-button" href="/">Inicio</a>
+    </div>
+</body>
+</html>

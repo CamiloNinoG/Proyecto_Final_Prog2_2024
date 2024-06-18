@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Libros 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .btn-container {
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Listado de Libros</h2>
+        <div th:if="${message}" class="alert alert-success" role="alert">
+            <span th:text="${message}"></span>
+        </div>
+
+        <form th:action="@{/buscarLibro}" method="post">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar por ISBN" name="isbnInput" aria-label="Buscar por ISBN" aria-describedby="button-addon2" th:value="${isbnInput}">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Género</th>
+                    <th>Fecha de Publicación</th>
+                    <th>ISBN</th>
+                    <th>Stock</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="libro : ${libros}">
+                    <td th:text="${libro.id}"></td>
+                    <td th:text="${libro.title}"></td>
+                    <td th:text="${libro.autor}"></td>
+                    <td th:text="${libro.gender}"></td>
+                    <td th:text="${libro.date}"></td>
+                    <td th:text="${libro.isbn}"></td>
+                    <td th:text="${libro.stock}"></td>
+                    <td th:text="${libro.description}"></td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="button-div">
+        <a class="back-button" href="/">Inicio</a>
+    </div>
+    
+</body>
+</html>

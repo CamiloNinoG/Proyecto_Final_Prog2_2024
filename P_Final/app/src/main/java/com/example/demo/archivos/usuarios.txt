@@ -1,0 +1,6 @@
+1;Camilo;Nino;camilo.nino@ucaldas.edu.co;12;administrador
+2;Laura;Gómez;laura.gomez@gmail.com;456;usuario
+3;Carlos;Pérez;carlos.perez@hotmail.com;789;visitante
+4;Ana;Martínez;ana.martinez@yahoo.es;abc;editor
+5;valeria;franco;valeriafrancoarbol@hotmail.com;123;administrador
+6;mario;roor;gut@gmail.com;6666;visitante
